@@ -1,0 +1,9 @@
+<form method="post" action="/recipes/<%=params[:id]%>/edit">
+  <p>Name: <input type="text" id="name" name="name" value="<%=Recipe.find(params[:id]).name%>"></p>
+  <br>
+  <p>Ingredients: <input type="text" id="ingredients" name="ingredients" value="<%=Recipe.find(params[:id]).ingredients%>"></p>
+  <br>
+  <p>Cooking Time: <input type="text" id="cook_time" name="cook_time" value="<%=Recipe.find(params[:id]).cook_time%>"></p>
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="submit" value="submit">
+</form>
